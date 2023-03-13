@@ -1,8 +1,8 @@
 ﻿namespace Registration.IBLL
 {
-    public interface IBaseBusinessLogic<T>
+    public interface IBaseBusinessLogic<R>
     {
-        void Process(T prop);
+        R Process();
     }
 
     public interface IBaseBusinessLogic<R,T>

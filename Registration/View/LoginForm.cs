@@ -13,6 +13,11 @@ namespace Registration.View
             InitializeComponent();
         }
 
+        public void Close()
+        {
+            this.Hide();
+        }
+
         public string LoginName
         {
             get

@@ -20,14 +20,7 @@ namespace Registration
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            IUnityContainer container = new UnityContainer();
-
-            container.RegisterType<ILoginPresenter, LoginPresenter>()
-                .RegisterType<ILoginView, LoginForm>()
-                .RegisterType<ILoginBusinessLogic, LoginBusinessLogic>();
-            container.AddNewExtension<Log4NetExtension>();
-
-            var presenter = container.Resolve<ILoginPresenter>();
+            var presenter = UnityConfig.GetContainer().Resolve<ILoginPresenter>();
 
             presenter.Run();
         }
