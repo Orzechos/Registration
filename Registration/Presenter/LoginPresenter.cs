@@ -3,6 +3,7 @@ using Registration.IBLL;
 using Registration.Model;
 using Registration.View;
 using System.Windows.Forms;
+using Unity;
 
 namespace Registration.Presenter
 {
@@ -30,10 +31,19 @@ namespace Registration.Presenter
                 Password = _loginForm.Password
             });
 
-            if(userModel.Role == null)
+            if (userModel.Role == null)
             {
                 MessageBox.Show("Wrong username or password.", "Access",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                var presenter = UnityConfig.GetContainer().Resolve<IListPresenter>();
+                presenter.SetUser(userModel);
+
+                _loginForm.Close();
+                presenter.Run();
+               
             }
         }
 

@@ -42,6 +42,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\IPatientRepository.cs" />
+    <Compile Include="Repository\IUserRepository.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Registration.Model\Registration.Model.csproj">
+      <Project>{D3890FFE-4E02-4D58-919C-F6109D5C3877}</Project>
+      <Name>Registration.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

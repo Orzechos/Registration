@@ -6,5 +6,8 @@ namespace Registration.View
     {
         string LoginName { get; set; }
         string Password { get; set; }
+
+
+        void Close();
     }
 }

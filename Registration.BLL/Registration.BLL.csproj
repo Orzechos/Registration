@@ -67,9 +67,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseBusinessLogic.cs" />
+    <Compile Include="Edit\AddOrUpdatePatientBusinessLogic.cs" />
     <Compile Include="IValidator.cs" />
+    <Compile Include="List\GetPatientByIdBusinessLogic.cs" />
+    <Compile Include="List\GetPatientsBusinessLogic.cs" />
+    <Compile Include="List\RemovePatientByIdBusinessLogic.cs" />
     <Compile Include="LogIn\LoginBusinessLogic.cs" />
-    <Compile Include="LogIn\Validators\LoginValidator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -80,6 +83,10 @@
     <ProjectReference Include="..\Registration.IBLL\Registration.IBLL.csproj">
       <Project>{3EE92977-6A8C-4F9E-A142-EC6F713A93D2}</Project>
       <Name>Registration.IBLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Registration.IDAL\Registration.IDAL.csproj">
+      <Project>{4F27B836-DADA-42ED-97C2-B2DF65D1BF49}</Project>
+      <Name>Registration.IDAL</Name>
     </ProjectReference>
     <ProjectReference Include="..\Registration.Model\Registration.Model.csproj">
       <Project>{d3890ffe-4e02-4d58-919c-f6109d5c3877}</Project>

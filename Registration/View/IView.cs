@@ -1,5 +1,4 @@
-﻿
-using Registration.Presenter;
+﻿using Registration.Presenter;
 
 namespace Registration.View
 {
